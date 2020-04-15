@@ -21,7 +21,7 @@ public class UserController {
     }
 
     @PostMapping
-    public UserRest createUser(UserDetailsRequestModel userDetailsRequestModel){
+    public UserRest createUser(@RequestBody UserDetailsRequestModel userDetailsRequestModel){
 
         UserRest returnValue = new UserRest();
 

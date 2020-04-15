@@ -1,17 +1,19 @@
 package com.appsdeveloperblog.app.ws.mobileappws.io.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
+@Entity
 public class UserEntity implements Serializable {
 
     private static final long serialVersionUID = 2L;
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
     @Column(nullable = false, length=50)
     private String userId;
@@ -20,9 +22,9 @@ public class UserEntity implements Serializable {
     private String firstName;
 
     @Column(nullable = false, length=50)
-    private String lastname;
+    private String lastName;
 
-    @Column(nullable = false, length=120)
+    @Column(nullable = false, length=200)
     private String email;
 
     @Column(nullable = false)
@@ -33,11 +35,11 @@ public class UserEntity implements Serializable {
     @Column(nullable = false)
     private Boolean emailVerificationStatus = false;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -57,12 +59,12 @@ public class UserEntity implements Serializable {
         this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
